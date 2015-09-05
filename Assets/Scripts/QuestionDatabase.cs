@@ -1,54 +1,51 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class QuestionDatabase : MonoBehaviour {
+public static class QuestionDatabase {
+	
+	private static string[] answer;
 
-	public static QuestionDatabase instance { get; private set; }
-	private string[] answer;
+	static QuestionDatabase() {
 
-	void Awake() {
-		instance = this;
-		
-		// Answers
 		answer = new string[33];
 		
-		answer [0] = "Gefreiter";
-		answer [1] = "Obergefreiter";
-		answer [2] = "Hauptgefreiter";
-		answer [3] = "Stabsgefreiter";
-		answer [4] = "Oberstabsgefreiter";
-		answer [5] = "Schütze (UA)";
-		answer [6] = "Gefreiter (UA)";
-		answer [7] = "Obergefreiter (UA)";
-		answer [8] = "Hauptgefreiter (UA)";
-		answer [9] = "Gefreiter (FA)";
-		answer [10] = "Gefreiter (OA)";
-		answer [11] = "Unteroffizier";
-		answer [12] = "Stabsunteroffizier";
-		answer [13] = "Feldwebel";
-		answer [14] = "Oberfeldwebel";
-		answer [15] = "Hauptfeldwebel";
-		answer [16] = "Stabsfeldwebel";
-		answer [17] = "Oberstabsfeldwebel";
-		answer [18] = "Unteroffizier (FA)";
-		answer [19] = "Fahnenjunker";
-		answer [20] = "Fähnrich";
-		answer [21] = "Oberfähnrich";
-		answer [22] = "Leutnant";
-		answer [23] = "Oberleutnant";
-		answer [24] = "Hauptmann";
-		answer [25] = "Stabshauptmann";
-		answer [26] = "Major";
-		answer [27] = "Oberstleutnant";
-		answer [28] = "Oberst";
-		answer [29] = "Brigadegeneral";
-		answer [30] = "Generalmajor";
-		answer [31] = "Generalleutnant";
-		answer [32] = "General";
+		answer [0] = "gefreiter";
+		answer [1] = "obergefreiter";
+		answer [2] = "hauptgefreiter";
+		answer [3] = "stabsgefreiter";
+		answer [4] = "oberstabsgefreiter";
+		answer [5] = "schütze(ua)";
+		answer [6] = "gefreiter(ua)";
+		answer [7] = "obergefreiter(ua)";
+		answer [8] = "hauptgefreiter(ua)";
+		answer [9] = "gefreiter(fa)";
+		answer [10] = "gefreiter(oa)";
+		answer [11] = "unteroffizier";
+		answer [12] = "stabsunteroffizier";
+		answer [13] = "feldwebel";
+		answer [14] = "oberfeldwebel";
+		answer [15] = "hauptfeldwebel";
+		answer [16] = "stabsfeldwebel";
+		answer [17] = "oberstabsfeldwebel";
+		answer [18] = "unteroffizier(fa)";
+		answer [19] = "fahnenjunker";
+		answer [20] = "fähnrich";
+		answer [21] = "oberfähnrich";
+		answer [22] = "leutnant";
+		answer [23] = "oberleutnant";
+		answer [24] = "hauptmann";
+		answer [25] = "stabshauptmann";
+		answer [26] = "major";
+		answer [27] = "oberstleutnant";
+		answer [28] = "oberst";
+		answer [29] = "brigadegeneral";
+		answer [30] = "generalmajor";
+		answer [31] = "generalleutnant";
+		answer [32] = "general";
 
 	}
 
-	public string getAnswer(int index) {
+	public static string getAnswer(int index) {
 		if(index >= 0 && index <= 32)
 			return answer[index];
 		else

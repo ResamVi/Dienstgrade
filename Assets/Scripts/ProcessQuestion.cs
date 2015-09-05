@@ -1,28 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ProcessQuestion : MonoBehaviour {
 
-	public SpriteRenderer renderer;
+	public SpriteRenderer render;
 
 	private Question currentQuestion;
+	private List<int> answered;
 
 	void Start () {
-		int number = (int)Random.Range (0, 33);
-		currentQuestion = new Question (number);
+		answered = new List<int>();
+		currentQuestion = new Question(nextQuestion());
 	}
 
 	void Update () {
-		renderer.sprite = currentQuestion.GetSprite ();
-
+		render.sprite = currentQuestion.GetSprite ();
 	}
 
 	public void TestAnswer(string input) {
-		Debug.Log (input + " - vs. - " + currentQuestion.GetAnswer ());
-		if (input.ToLower() == currentQuestion.GetAnswer ().ToLower()) {
-			Debug.Log ("Correct");
-		} else {
+		if (input.ToLower().Replace(" ", "" ) == currentQuestion.GetAnswer()) {
+			currentQuestion = new Question(nextQuestion());
+		}else {
 			Debug.Log ("Wrong");
 		}
+		
+	}
+
+	private int nextQuestion() {
+
+		int index = Random.Range (0, 33);
+		/*do {
+			index = Random.Range (0, 33);
+		}while(!answered.Contains (index));*/
+		Debug.Log (answered.Contains (index));
+		for(int i = 0; i < answered.Count; i++) {
+			Debug.Log(answered.ToArray()[i]);
+		}
+		answered.Add (index);
+		return index;
 	}
 }

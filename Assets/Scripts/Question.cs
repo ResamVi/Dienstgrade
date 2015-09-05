@@ -10,7 +10,7 @@ public class Question {
 	public Question(int index) {
 		list = Resources.LoadAll <Sprite>("Sprites");
 		question = list [index+1];
-		answer = QuestionDatabase.instance.getAnswer (index);
+		answer = QuestionDatabase.getAnswer (index);
 	}
 
 	public Sprite GetSprite() {
