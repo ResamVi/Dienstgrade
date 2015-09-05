@@ -4,19 +4,10 @@ using System.Collections;
 public class QuestionDatabase : MonoBehaviour {
 
 	public static QuestionDatabase instance { get; private set; }
-
-	private string[] question;
 	private string[] answer;
 
 	void Awake() {
 		instance = this;
-
-		// Questions
-		question = new string[33];
-		
-		for(int i = 0; i < question.Length; i++) {
-			question[i] = "list_" + i;
-		}
 		
 		// Answers
 		answer = new string[33];
@@ -55,13 +46,6 @@ public class QuestionDatabase : MonoBehaviour {
 		answer [31] = "Generalleutnant";
 		answer [32] = "General";
 
-	}
-
-	public string getQuestion(int index) {
-		if (index >= 0 && index <= 32)
-			return question [index];
-		else
-			return "Error";
 	}
 
 	public string getAnswer(int index) {
