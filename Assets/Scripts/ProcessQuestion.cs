@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ProcessQuestion : MonoBehaviour {
 
 	public SpriteRenderer render;
+	public ScoreController score;
 
 	private Question currentQuestion;
 	private List<int> answered;
@@ -21,8 +22,9 @@ public class ProcessQuestion : MonoBehaviour {
 	public void TestAnswer(string input) {
 		if (input.ToLower().Replace(" ", "" ) == currentQuestion.GetAnswer()) {
 			currentQuestion = new Question(nextQuestion());
+			score.UpdateScore(true);
 		}else {
-			Debug.Log ("Wrong");
+			score.UpdateScore(false);
 		}
 		
 	}

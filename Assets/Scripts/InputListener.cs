@@ -5,10 +5,9 @@ using UnityEngine.UI;
 public class InputListener : MonoBehaviour {
 
 	public ProcessQuestion process;
-	InputField field;
+	public InputField field;
 
 	void Start() {
-		field = GameObject.Find ("HUD/InputField").GetComponent<InputField>();
 		field.onEndEdit.AddListener (SubmitInput);
 	}
 
