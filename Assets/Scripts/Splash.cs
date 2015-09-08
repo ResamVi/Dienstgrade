@@ -21,7 +21,6 @@ public class Splash : MonoBehaviour {
 		if (done)
 			Application.LoadLevel(0);
 
-
 	}
 
 	IEnumerator Fade() {

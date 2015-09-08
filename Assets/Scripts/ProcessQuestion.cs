@@ -8,11 +8,14 @@ public class ProcessQuestion : MonoBehaviour {
 	public ScoreController score;
 
 	private Question currentQuestion;
-	private List<int> answered;
+	private int[] questionList;
+	private int index;
 
 	void Start () {
-		answered = new List<int>();
-		currentQuestion = new Question(nextQuestion());
+		index = 0;
+		questionList = shuffle ();
+		currentQuestion = new Question(index);
+		shuffle ();
 	}
 
 	void Update () {
@@ -21,7 +24,7 @@ public class ProcessQuestion : MonoBehaviour {
 
 	public void TestAnswer(string input) {
 		if (input.ToLower().Replace(" ", "" ) == currentQuestion.GetAnswer()) {
-			currentQuestion = new Question(nextQuestion());
+			currentQuestion = new Question(++index);
 			score.UpdateScore(true);
 		}else {
 			score.UpdateScore(false);
@@ -29,17 +32,22 @@ public class ProcessQuestion : MonoBehaviour {
 		
 	}
 
-	private int nextQuestion() {
+	private int[] shuffle() {
+		int[] array = new int[34];
 
-		int index = Random.Range (0, 33);
-		/*do {
-			index = Random.Range (0, 33);
-		}while(!answered.Contains (index));*/
-		Debug.Log (answered.Contains (index));
-		for(int i = 0; i < answered.Count; i++) {
-			Debug.Log(answered.ToArray()[i]);
+		for(int i = 0; i < array.Length; i++) {
+			array[i] = i;
 		}
-		answered.Add (index);
-		return index;
+
+		int m = array.Length;
+
+		while(m > 0) {
+			int i = Random.Range(0, m--);
+			int t = array[m];
+			array[m] = array[i];
+			array[i] = t;
+		}
+
+		return array;
 	}
 }
