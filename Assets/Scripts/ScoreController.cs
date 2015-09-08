@@ -21,6 +21,11 @@ public class ScoreController : MonoBehaviour {
 		if (correct)
 			score++;
 
+		if (total == 33)
+			Application.LoadLevel (3);
+
 		total++;
+
+
 	}
 }
