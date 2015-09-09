@@ -9,7 +9,8 @@ public class Question {
 
 	public Question(int index) {
 		list = Resources.LoadAll <Sprite>("Sprites");
-		question = list [index+1];
+		Debug.Log (list.Length);
+		question = list [index];
 		answer = QuestionDatabase.getAnswer (index);
 	}
 

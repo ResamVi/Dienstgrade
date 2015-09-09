@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4f58f1edf972e33418d3cec12fc2b102
-timeCreated: 1441358037
+timeCreated: 1441789157
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -83,16 +83,6 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: list_0
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 478
-        width: 110
-        height: 230
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_1
       rect:
         serializedVersion: 2
@@ -101,7 +91,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_2
       rect:
@@ -111,7 +101,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_3
       rect:
@@ -121,7 +111,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_4
       rect:
@@ -131,7 +121,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_5
       rect:
@@ -141,7 +131,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_6
       rect:
@@ -211,7 +201,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_13
       rect:
@@ -221,7 +211,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_14
       rect:
@@ -231,7 +221,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_15
       rect:
@@ -241,7 +231,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_16
       rect:
@@ -251,7 +241,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_17
       rect:
@@ -261,7 +251,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_18
       rect:
@@ -271,7 +261,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_19
       rect:
@@ -321,7 +311,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_25
       rect:
@@ -331,7 +321,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_26
       rect:
@@ -341,7 +331,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_27
       rect:
@@ -351,7 +341,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_28
       rect:
@@ -361,7 +351,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_29
       rect:
@@ -371,7 +361,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_30
       rect:
@@ -381,7 +371,7 @@ TextureImporter:
         width: 110
         height: 230
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: list_31
       rect:

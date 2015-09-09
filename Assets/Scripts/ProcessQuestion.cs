@@ -23,6 +23,7 @@ public class ProcessQuestion : MonoBehaviour {
 
 	void Update () {
 		render.sprite = currentQuestion.GetSprite ();
+		Debug.Log (questionList[index]);
 	}
 
 	public void TestAnswer(string input) {
