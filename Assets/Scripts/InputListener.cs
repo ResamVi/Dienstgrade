@@ -14,5 +14,7 @@ public class InputListener : MonoBehaviour {
 	private void SubmitInput(string input) {
 		process.TestAnswer (input);
 		field.text = "";
+		field.Select ();
+		field.ActivateInputField ();
 	}
 }

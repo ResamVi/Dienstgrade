@@ -7,6 +7,9 @@ public class ProcessQuestion : MonoBehaviour {
 	public SpriteRenderer render;
 	public ScoreController score;
 
+	public Object correct;
+	public Object wrong;
+
 	private Question currentQuestion;
 	private int[] questionList;
 	private int index;
@@ -14,7 +17,7 @@ public class ProcessQuestion : MonoBehaviour {
 	void Start () {
 		index = 0;
 		questionList = shuffle ();
-		currentQuestion = new Question(index);
+		currentQuestion = new Question(questionList[index]);
 		shuffle ();
 	}
 
@@ -24,10 +27,13 @@ public class ProcessQuestion : MonoBehaviour {
 
 	public void TestAnswer(string input) {
 		if (input.ToLower().Replace(" ", "" ) == currentQuestion.GetAnswer()) {
-			currentQuestion = new Question(++index);
+			currentQuestion = new Question(questionList[++index]);
+			Instantiate (correct, new Vector2(0,0), Quaternion.identity);
 			score.UpdateScore(true);
+
 		}else {
 			score.UpdateScore(false);
+			Instantiate (wrong, new Vector2(0,0), Quaternion.identity);
 		}
 		
 	}
