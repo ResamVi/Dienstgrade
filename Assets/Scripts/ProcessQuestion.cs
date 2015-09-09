@@ -13,17 +13,24 @@ public class ProcessQuestion : MonoBehaviour {
 	private Question currentQuestion;
 	private int[] questionList;
 	private int index;
+	private bool difficult;
 
 	void Start () {
 		index = 0;
 		questionList = shuffle ();
+
+		if (GameObject.Find ("H_Difficulty") != null)
+			difficult = true;
+		else
+			difficult = false;
+
 		currentQuestion = new Question(questionList[index]);
 		shuffle ();
+		Debug.Log (difficult);
 	}
 
 	void Update () {
 		render.sprite = currentQuestion.GetSprite ();
-		Debug.Log (questionList[index]);
 	}
 
 	public void TestAnswer(string input) {

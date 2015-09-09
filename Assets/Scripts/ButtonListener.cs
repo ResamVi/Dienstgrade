@@ -1,34 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ButtonListener : MonoBehaviour {
+public class ButtonListener : MonoBehaviour 
+{
+	public DifficultySetting difficulty;
 
-	public void SwitchScene(int value) {
-		switch (value) {
-		case 0:
-			Application.LoadLevel (0); 
-			break;
-		
-		case 1: 
-			Application.LoadLevel (1); 
-			break;
-		
-		case 2: 
-			Application.LoadLevel (1); 
-			DifficultySetting.instance.setEasy(false);
-			break;
-
-		case 3:
-			Application.LoadLevel (2); 
-			break;
-
-		default:
-			break;
+	public void SwitchScene(int value)
+	{
+		if (value == 0)
+		{
+			difficulty.setToDifficult ();
+			Object.DontDestroyOnLoad (difficulty);
+			Application.LoadLevel (3);
 		}
+		else 
+			Application.LoadLevel(value);
 	}
 
-	public void QuitGame() {
+	public void QuitGame()
+	{
 		Application.Quit ();
 	}
-
 }
