@@ -10,7 +10,7 @@ public class ProcessQuestion : MonoBehaviour {
 	public Object correct;
 	public Object wrong;
 
-	private Question currentQuestion;
+	private QuestionPicture currentQuestion;
 	private int[] questionList;
 	private int index;
 	private bool difficult;
@@ -24,7 +24,7 @@ public class ProcessQuestion : MonoBehaviour {
 		else
 			difficult = false;
 
-		currentQuestion = new Question(questionList[index]);
+		currentQuestion = new QuestionPicture(questionList[index]);
 		shuffle ();
 	}
 
@@ -34,10 +34,7 @@ public class ProcessQuestion : MonoBehaviour {
 
 	public void TestAnswer(string input) {
 		if (input.ToLower().Replace(" ", "" ) == currentQuestion.GetAnswer()) {
-			Debug.Log (questionList[++index]);
-			currentQuestion = new Question(questionList[index]);
-			Instantiate (correct, new Vector2(0,0), Quaternion.identity);
-			score.UpdateScore(true);
+			createQuestion();
 
 		}else {
 			score.UpdateScore(false);
@@ -63,5 +60,21 @@ public class ProcessQuestion : MonoBehaviour {
 		}
 
 		return array;
+	}
+
+	private void createQuestion() {
+		if (!difficult) {
+			currentQuestion = new QuestionPicture (questionList [index]);
+			Instantiate (correct, new Vector2 (0, 0), Quaternion.identity);
+			score.UpdateScore (true);
+		}else {
+			if(Mathf.Round(Random.value) == 0) {
+				currentQuestion = new QuestionPicture (questionList [index]);
+				Instantiate (correct, new Vector2 (0, 0), Quaternion.identity);
+				score.UpdateScore (true);
+			}else{
+				// Other variation
+			}
+		}
 	}
 }
