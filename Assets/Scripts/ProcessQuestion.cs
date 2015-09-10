@@ -26,7 +26,6 @@ public class ProcessQuestion : MonoBehaviour {
 
 		currentQuestion = new Question(questionList[index]);
 		shuffle ();
-		Debug.Log (difficult);
 	}
 
 	void Update () {
@@ -35,7 +34,8 @@ public class ProcessQuestion : MonoBehaviour {
 
 	public void TestAnswer(string input) {
 		if (input.ToLower().Replace(" ", "" ) == currentQuestion.GetAnswer()) {
-			currentQuestion = new Question(questionList[++index]);
+			Debug.Log (questionList[++index]);
+			currentQuestion = new Question(questionList[index]);
 			Instantiate (correct, new Vector2(0,0), Quaternion.identity);
 			score.UpdateScore(true);
 
@@ -47,7 +47,7 @@ public class ProcessQuestion : MonoBehaviour {
 	}
 
 	private int[] shuffle() {
-		int[] array = new int[34];
+		int[] array = new int[33];
 
 		for(int i = 0; i < array.Length; i++) {
 			array[i] = i;

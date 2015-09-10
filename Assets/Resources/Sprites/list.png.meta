@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4f58f1edf972e33418d3cec12fc2b102
-timeCreated: 1441789157
+timeCreated: 1441875004
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -27,17 +27,17 @@ TextureImporter:
     21300040: list_20
     21300042: list_21
     21300044: list_22
-    21300046: list_24
-    21300048: list_25
-    21300050: list_26
-    21300052: list_27
-    21300054: list_28
-    21300056: list_29
-    21300058: list_30
-    21300060: list_31
-    21300062: list_32
-    21300064: list_33
-    21300066: list_34
+    21300046: list_23
+    21300048: list_24
+    21300050: list_25
+    21300052: list_26
+    21300054: list_27
+    21300056: list_28
+    21300058: list_29
+    21300060: list_30
+    21300062: list_31
+    21300064: list_32
+    21300066: list_33
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -303,7 +303,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_24
+    - name: list_23
       rect:
         serializedVersion: 2
         x: 15
@@ -313,7 +313,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_25
+    - name: list_24
       rect:
         serializedVersion: 2
         x: 125
@@ -323,7 +323,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_26
+    - name: list_25
       rect:
         serializedVersion: 2
         x: 235
@@ -333,7 +333,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_27
+    - name: list_26
       rect:
         serializedVersion: 2
         x: 345
@@ -343,7 +343,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_28
+    - name: list_27
       rect:
         serializedVersion: 2
         x: 455
@@ -353,7 +353,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_29
+    - name: list_28
       rect:
         serializedVersion: 2
         x: 565
@@ -363,7 +363,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_30
+    - name: list_29
       rect:
         serializedVersion: 2
         x: 675
@@ -373,7 +373,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_31
+    - name: list_30
       rect:
         serializedVersion: 2
         x: 802
@@ -383,7 +383,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_32
+    - name: list_31
       rect:
         serializedVersion: 2
         x: 914
@@ -393,7 +393,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_33
+    - name: list_32
       rect:
         serializedVersion: 2
         x: 1022
@@ -403,7 +403,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: list_34
+    - name: list_33
       rect:
         serializedVersion: 2
         x: 1132
