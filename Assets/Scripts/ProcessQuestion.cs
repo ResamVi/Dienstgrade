@@ -6,6 +6,7 @@ public class ProcessQuestion : MonoBehaviour {
 
 	public SpriteRenderer render;
 	public ScoreController score;
+	public HUDController hud;
 
 	public Object correct;
 	public Object wrong;
@@ -24,7 +25,7 @@ public class ProcessQuestion : MonoBehaviour {
 		else
 			difficult = false;
 
-		currentQuestion = new QuestionPicture(questionList[index]);
+		createQuestion();
 		shuffle ();
 	}
 
@@ -34,8 +35,8 @@ public class ProcessQuestion : MonoBehaviour {
 
 	public void TestAnswer(string input) {
 		if (input.ToLower().Replace(" ", "" ) == currentQuestion.GetAnswer()) {
+			Instantiate (correct, new Vector2 (0, 0), Quaternion.identity);
 			createQuestion();
-
 		}else {
 			score.UpdateScore(false);
 			Instantiate (wrong, new Vector2(0,0), Quaternion.identity);
@@ -63,18 +64,21 @@ public class ProcessQuestion : MonoBehaviour {
 	}
 
 	private void createQuestion() {
-		if (!difficult) {
-			currentQuestion = new QuestionPicture (questionList [index]);
-			Instantiate (correct, new Vector2 (0, 0), Quaternion.identity);
+		if (difficult) { // !
+			currentQuestion = new QuestionPicture (questionList [++index]);
 			score.UpdateScore (true);
 		}else {
 			if(Mathf.Round(Random.value) == 0) {
-				currentQuestion = new QuestionPicture (questionList [index]);
-				Instantiate (correct, new Vector2 (0, 0), Quaternion.identity);
+
+				hud.switchToPicture();
+
+				currentQuestion = new QuestionPicture (questionList [++index]);
 				score.UpdateScore (true);
 			}else{
 				// Other variation
+
+				hud.switchToText();
 			}
 		}
-	}
+	}	
 }

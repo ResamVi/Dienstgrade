@@ -4,28 +4,31 @@ using System.Collections;
 public class QuestionText {
 	
 	private Sprite[] list;
-	private Sprite[] questions;
-	private string answer;
+	private Sprite[] answers;
 	private string question;
 
 	public QuestionText(int index) {
 		list = Resources.LoadAll <Sprite>("Sprites");
 		question = "Welcher ist der " + QuestionDatabase.getAnswer (index);
-		questions [0] = list [index];
-		// NEED TO TEST!
-		//questions [1] = list [index + Mathf.RoundToInt (Random.Range (1, 3))];
-		//questions [2] = list [index - Mathf.RoundToInt (Random.Range (1, 3))];
+		answers = GenerateQuestion (index);
+
 	}
-	
+
+	private Sprite[] GenerateQuestion(int index) {
+
+		return list;
+
+	}
+
 	public Sprite GetSprites() {
-		return questions[];
+		return answers[0];
 	}
 
 	public string GetQuestions() {
-
+		return question;	
 	}
 
 	public string GetAnswer() {
-		return answer;
+		return "Error";
 	}
 }
