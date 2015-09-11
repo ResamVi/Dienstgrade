@@ -12,9 +12,11 @@ public class ProcessQuestion : MonoBehaviour {
 	public Object wrong;
 
 	private QuestionPicture currentQuestion;
+	private QuestionText currentTQuestion;
 	private int[] questionList;
 	private int index;
 	private bool difficult;
+	private bool isPicture;
 
 	void Start () {
 		index = 0;
@@ -30,11 +32,12 @@ public class ProcessQuestion : MonoBehaviour {
 	}
 
 	void Update () {
-		render.sprite = currentQuestion.GetSprite ();
+		if(isPicture) render.sprite = currentQuestion.GetSprite ();
 	}
 
 	public void TestAnswer(string input) {
 		if (input.ToLower().Replace(" ", "" ) == currentQuestion.GetAnswer()) {
+			score.UpdateScore (true);
 			Instantiate (correct, new Vector2 (0, 0), Quaternion.identity);
 			createQuestion();
 		}else {
@@ -42,6 +45,11 @@ public class ProcessQuestion : MonoBehaviour {
 			Instantiate (wrong, new Vector2(0,0), Quaternion.identity);
 		}
 		
+	}
+
+	// Yup. Im sorry
+	public void TestAnswer2(int index) {
+	
 	}
 
 	private int[] shuffle() {
@@ -65,19 +73,19 @@ public class ProcessQuestion : MonoBehaviour {
 
 	private void createQuestion() {
 		if (difficult) { // !
+			isPicture = true;
 			currentQuestion = new QuestionPicture (questionList [++index]);
-			score.UpdateScore (true);
+
 		}else {
 			if(Mathf.Round(Random.value) == 0) {
-
+				isPicture = true;
 				hud.switchToPicture();
-
 				currentQuestion = new QuestionPicture (questionList [++index]);
-				score.UpdateScore (true);
-			}else{
-				// Other variation
 
+			}else{
+				isPicture = false;
 				hud.switchToText();
+				currentTQuestion = new QuestionText(questionList[++index]);
 			}
 		}
 	}	
